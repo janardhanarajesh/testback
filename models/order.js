@@ -1,0 +1,49 @@
+import mongoose from "mongoose";
+const order=mongoose.Schema;
+let new_order=new order({
+    user:{
+        type:String,
+        required:true
+    },
+    image:{
+        type:String,
+        required:true
+    },
+    date:{
+        type:String,
+        required:true
+    },
+    name:{
+        type:String,
+        required:true
+    },
+    itemname:{
+        type:String,
+        required:true
+    },
+    itemdisc:{
+        type:String,
+        required:true
+    },
+    qty:{
+        type:String,
+        required:true
+    },
+    cost:{
+        type:String,
+        required:true
+    },
+    place:{
+        type:String,
+        required:true
+    },
+    phn:{
+        type:String,
+        required:true
+    },
+    status:{
+        type:String,
+        required:false
+    }
+})
+export default mongoose.model("Order",new_order)
